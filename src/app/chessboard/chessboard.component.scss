@@ -1,0 +1,27 @@
+.chess-board {
+  box-sizing: border-box;
+  border: solid 1px #d4d4d4;
+  width: 400px;
+  height: 400px;
+  .cell {
+    height: 50px;
+    width: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    &.black {
+      background-color: #3b3b3b;
+      color: white;
+    }
+    &.highlight {
+      box-sizing: border-box;
+      border: solid 2px #73ff00;
+      background-color: #f3ff86;
+      color: red;
+    }
+  }
+  .cell:hover {
+    box-sizing: border-box;
+    border: solid 2px #ff0000;
+    cursor: pointer;
+  }
+}

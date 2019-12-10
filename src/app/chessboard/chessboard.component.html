@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-6">
+            <table class="chess-board" (mouseleave)="chessboard.clearHightLightChessboard()">
+                <tbody>
+                    <tr *ngFor="let row of chessboard.chessboard">
+                        <td class="cell" [ngClass]="col.class" [class.highlight]=" col.highlight "
+                            *ngFor="let col of row" (mouseover)="cellHover(col)">{{col.text}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-6 col-md-4 col-lg-4">
+            <select [(ngModel)]="selectedPipiece" class="form-control">
+                <option *ngFor="let piece of pieces" [value]="piece">
+                    {{ piece }}
+                </option>
+            </select>
+            <pre>
+                {{chessboard.higlightedCells | json }}
+            </pre>
+            <span>Note: <small>Hover on chessboard to see the predictions</small></span>
+        </div>
+    </div>
+</div>
