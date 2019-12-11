@@ -21,6 +21,7 @@
       </table>
     </div>
     <div class="col-xs-4 col-md-4 col-lg-4">
+      <label for="">Select Piece</label>
       <select [(ngModel)]="selectedPiece" class="form-control">
         <option *ngFor="let piece of chessboard.pieces" [value]="pieces[piece]">
           {{ piece }}
