@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-6">
+        <div class="col-xs-8 col-md-6 col-lg-6">
             <table class="chess-board" (mouseleave)="chessboard.clearHightLightChessboard()">
                 <tbody>
                     <tr *ngFor="let row of chessboard.chessboard">
@@ -10,9 +10,9 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-xs-6 col-md-4 col-lg-4">
+        <div class="col-xs-4 col-md-4 col-lg-4">
             <select [(ngModel)]="selectedPipiece" class="form-control">
-                <option *ngFor="let piece of pieces" [value]="piece">
+                <option *ngFor="let piece of chessboard.pieces" [value]="pieces[piece]">
                     {{ piece }}
                 </option>
             </select>
